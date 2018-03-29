@@ -1,2 +1,2 @@
 # Pthon_progs
-python programs
+These are the programs created of the udemy python bootcamp course
