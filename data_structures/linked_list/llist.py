@@ -65,6 +65,7 @@ class LinkedList:
         new_node = Node(data)
         if self.is_empty():
             self.head=new_node
+            return
 
         new_node.next=self.head
         self.head=new_node
@@ -100,3 +101,42 @@ class LinkedList:
                 curr=curr.next
         else:
             raise LookupError("{} does not exists in the list".format(add_after))
+
+    def delete(self,data):
+        '''
+        deletes a node from the linked list.
+        '''
+        if self.if_exists(data):
+            curr=self.head
+            if curr.data==data:
+                self.head=curr.next
+                return curr.data
+            to_delete=curr.next
+            while to_delete:
+                if to_delete.data==data:
+                    curr.next=to_delete.next
+                    return to_delete.data
+                curr=to_delete
+                to_delete=to_delete.next
+
+        else:
+            raise LookupError("{} does not exist in the list".format(data))
+
+    def reverse(self):
+        '''
+        reverse the list.
+        '''
+        if self.is_empty():
+            raise LookupError("empty list")
+        prev=None
+        curr=self.head
+        while curr:
+            nxt=curr.next
+            curr.next=prev
+            prev=curr
+            curr=nxt
+        self.head=prev
+
+    def swap(self,data1,data2):
+        '''
+        '''
