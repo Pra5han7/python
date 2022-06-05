@@ -4,7 +4,7 @@ some modules contains python 2 which will be modified in python 3 later.
 -------------------------------------------------------------------------
 ## practise_snippets:
 * string
-    - contains snippet.py file. it has several functions for logical questions asked in interviews or found in hackerrank.
+    - contains snippet.py file. it has several string functions for logical questions asked in interviews or found in hackerrank.
 * patterns
     - contains patterns.py implements sample patterns as functions
 
