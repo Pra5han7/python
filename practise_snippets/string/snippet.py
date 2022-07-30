@@ -57,10 +57,17 @@ def char_frequency(string):
     d={}
 
     for item in string:
-        if item in d.keys():
+        if item in d:
             d[item] = d[item]+1
         else:
             d[item]=1
     return d
 
-if __name__=='__main__':
+def char_frequency_advanced(string):
+    '''
+    same as char_frequency just uses the dict method get
+    '''
+    d={}
+    for item in string:
+        d[item]=d.get(item,0)+1
+    return d

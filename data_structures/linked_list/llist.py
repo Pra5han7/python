@@ -136,7 +136,3 @@ class LinkedList:
             prev=curr
             curr=nxt
         self.head=prev
-
-    def swap(self,data1,data2):
-        '''
-        '''
